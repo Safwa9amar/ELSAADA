@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  /* padding: 200px; */
+  /* text-align: center; */
+  /* background: darkseagreen; */
+  /* color: white; */
+
+  background-image: url("../images/15.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+

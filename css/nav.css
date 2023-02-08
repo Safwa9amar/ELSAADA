@@ -1,0 +1,43 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: sticky;
+  top: 0;
+  background: #eee;
+}
+
+.logo {
+  color: #ff7200;
+  /* font-size: 35px; */
+  font-family: Arial;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+  color: #ff7200;
+}
+
+ul li a.active {
+  color: #ff7200;
+}
