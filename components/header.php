@@ -14,12 +14,11 @@
 
 
 <!-- css roles -->
-<!-- <link rel="stylesheet" href="./pages/index.css"> -->
-
+<link rel="stylesheet" href="./css/index.css">
 <link rel="stylesheet" href="./css/nav.css">
-<link rel="stylesheet" href="./css/style.css">
 
-
+<!-- favicon -->
+<link rel="icon" href="./favicon.png" type="image/png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet" />
 

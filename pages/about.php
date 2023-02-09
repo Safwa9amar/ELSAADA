@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="./css/about.css" />
-<div class="container">
+<div class="about">
   <div class="content-section">
-      <h1>A Propos</h1>
+    <h1>A Propos</h1>
     <div class="content">
       <h3>Comment se passe une agence immobilière</h3>
       <p>
@@ -13,12 +13,10 @@
       </p>
     </div>
     <div class="social">
-      <a href=""><i class="fab fa-facebook-f"></i></a>
-      <a href=""><i class="fab fa-twitter"></i></a>
-      <a href=""><i class="fab fa-instagram"></i></a>
+      <li><i class="fa fa-facebook-square fa-2x"></i></li>
+      <li><i class="fa fa-instagram fa-2x"></i></li>
+      <li><i class="fa fa-twitter-square fa-2x"></i></li>
     </div>
   </div>
-  <div class="image-section">
-    <img src="./images/6.jpg" />
-  </div>
+  <img src="./images/6.jpg" />
 </div>

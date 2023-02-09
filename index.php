@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="main">
+  <main >
     <?php include('./components/navbar.php') ?>
 
     <?php
@@ -25,7 +25,7 @@
     }
     ?>
 
-  </div>
+  </main>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 

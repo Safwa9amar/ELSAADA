@@ -1,110 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
-*{
-	margin:0px;
-	padding:0px;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.section{
-	/* width: 100%; */
-	/* min-height: 100vh; */
-	/* background-color: rgb(253, 250, 250); */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.container{
-	width: 80%;
-	display: block;
-	margin:auto;
-	padding-top: 100px;
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
-.content-section{
-	float: left;
-	width: 55%;
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
-.image-section{
-	float: right;
-	width: 40%;
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
-.image-section img{
-    width: 200;
-    height: 400px;
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
-.content-section .title{
-	text-transform: uppercase;
-	font-size: 28px;
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5% 10%;
+  -webkit-animation: fade-in 1s ease-in-out;
+          animation: fade-in 1s ease-in-out;
 }
-.content-section .content h3{
-	margin-top: 20px;
-	color:#5d5d5d;
-	font-size: 21px;
+.about .content-section {
+  padding-inline: 5%;
 }
-.content-section .content p{
-	margin-top: 10px;
-	font-family: sans-serif;
-	font-size: 18px;
-	line-height: 1.5;
+.about .content-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #5D3891;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
-.content-section .content .button{
-	margin-top: 30px;
+.about .content-section .content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-bottom: #F99417 2px solid;
 }
-.content-section .content .button a{
-	background-color: #3d3d3d;
-	padding:12px 40px;
-	text-decoration: none;
-	color:#fff;
-	font-size: 25px;
-	letter-spacing: 1.5px;
+.about .content-section .content p {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
 }
-.content-section .content .button a:hover{
-	background-color: #a52a2a;
-	color:#fff;
+.about .content-section .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  color: #5D3891;
+  list-style: none;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
-.content-section .social{
-	margin: 40px 40px;
+.about img {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-animation: slide-in-right 1s ease-in-out;
+          animation: slide-in-right 1s ease-in-out;
 }
-.content-section .social i{
-	color:#a52a2a;
-	font-size: 30px;
-	padding:0px 10px;
-}
-.content-section .social i:hover{
-	color:#696464;
-}
-@media screen and (max-width: 768px){
-	.container{
-	width: 80%;
-	display: block;
-	margin:auto;
-	padding-top:50px;
-}
-.content-section{
-	float:none;
-	width:100%;
-	display: block;
-	margin:auto;
-}
-.image-section{
-	float:none;
-	width:100%;
-	
-}
-.image-section img{
-	width: 100%;
-	height: auto;
-	display: block;
-	margin:auto;
-}
-.content-section .title{
-	text-align: center;
-	font-size: 19px;
-}
-.content-section .content .button{
-	text-align: center;
-}
-.content-section .content .button a{
-	padding:9px 30px;
-}
-.content-section .social{
-	text-align: center;
-}
-
+@media screen and (max-width: 768px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5%;
+  }
+  .about img {
+    margin-top: 2rem;
+    width: 90%;
+    height: 100%;
+  }
 }
