@@ -12,20 +12,19 @@ $result = mysqli_query($con, "SELECT * FROM annonce  ORDER BY id DESC ");
 // SELECT MAX(id) FROM usertable)
 ?>
 
+<link rel="stylesheet" href="./css/home.css">
 
-<!--    <link rel="stylesheet" href="./css/style.css"> -->
+<div class="home-wrapper">
+    <div class="descpription">
+        <!-- <img src="./images/logoBlack.svg" alt="logo"> -->
+        <h1>Application Agence Immobiliere <br> Bienvenue chez nous</h1>
+        <p>Trouver la maison de vos reves chez notre agence immobiliere
+        </p>
 
-
-<div class="content">
-    <h1>Application Agence <br><span>Immobiliere</span> <br>Bienvenue chez nous</h1>
-    <p class="par">Trouver la maison de vos reves chez notre agence immobiliere
-    </p>
-
-</div>
-<div class="main">
+    </div>
     <h2>TITLE HEADING</h2>
     <h5>Title description, juin, 2022</h5>
-    <div class="fakeimg" style="height:300px;">
+    <div class="fakeimg">
         <!-- <section class="room-details-section spad"> -->
         <div class="container">
             <div class="row">
@@ -35,7 +34,7 @@ $result = mysqli_query($con, "SELECT * FROM annonce  ORDER BY id DESC ");
                     </div>
                 </div>
             </div>
-            <table id="myTable" width='100%' border=2>
+            <table id="myTable">
                 <tbody>
                     <tr bgcolor='#333'>
                         <th>

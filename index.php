@@ -1,4 +1,5 @@
 <?php include('./components/functions.php') ?>
+<?php include('./db_operations/connect.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,12 +9,12 @@
 </head>
 
 <body>
-  <main >
+  <main>
     <?php include('./components/navbar.php') ?>
 
     <?php
     if (isset($_GET['page'])) {
-      $pages = ['home', 'about', 'gallerie', 'contact'];
+      $pages = ['home', 'about', 'gallerie', 'contact', 'store','products'];
       $page = $_GET['page'];
       if (in_array($page, $pages)) {
         gotoPage($page);
@@ -26,7 +27,6 @@
     ?>
 
   </main>
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 
 </html>

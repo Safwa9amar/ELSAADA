@@ -99,6 +99,7 @@
           align-items: center;
   background-size: cover;
   width: 90%;
+  padding: 1rem;
   border-radius: 10px;
   -webkit-animation: fade-in 1s ease-in-out;
           animation: fade-in 1s ease-in-out;
@@ -114,6 +115,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1rem;
   text-transform: capitalize;
 }
 .contact .head .title {
@@ -289,4 +291,33 @@
           justify-content: space-between;
   color: #5D3891;
   list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .contact .body {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+  }
+  .contact .body .list {
+    width: 100%;
+    gap: 2rem;
+  }
+  .contact .form-wrapper {
+    width: 100%;
+  }
+  .contact .form-wrapper form {
+    width: 100%;
+  }
+  .contact .form-wrapper form label input {
+    width: 100%;
+  }
+  .contact .form-wrapper form label textarea {
+    width: 100%;
+  }
 }

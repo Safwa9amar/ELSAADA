@@ -18,6 +18,10 @@ if (isset($_GET['page'])) {
                 } ?>" href="?page=home">Acceuil</a>
     </li>
     <li>
+      <a class="<?php if ($curr_page === 'store' || $curr_page === 'products' ) {
+                  echo 'active';
+                } ?>" href="?page=store">Store</a>
+    <li>
       <a class="<?php if ($curr_page === 'about') {
                   echo 'active';
                 } ?>" href="?page=about">A propos</a>

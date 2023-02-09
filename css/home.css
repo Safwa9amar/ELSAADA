@@ -1,0 +1,96 @@
+.home-wrapper {
+  width: 95%;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.home-wrapper .descpription {
+  background-image: url("../images/home_bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #5D3891;
+  height: 80vh;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.home-wrapper .descpription h1 {
+  font-size: 4.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.911);
+}
+.home-wrapper .descpription p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.home-wrapper .descpription img {
+  width: 20%;
+  height: 10%;
+}
+.home-wrapper .content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.home-wrapper .content span {
+  font-size: 36px;
+}
+.home-wrapper .content p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.home-wrapper h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.home-wrapper h5 {
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: gray;
+}
+.home-wrapper .fakeimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.home-wrapper input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.home-wrapper table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+.home-wrapper th,
+.home-wrapper td {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid gray;
+}
+.home-wrapper th h4 {
+  color: white;
+}
