@@ -18,7 +18,7 @@ if (isset($_GET['page'])) {
                 } ?>" href="?page=home">Acceuil</a>
     </li>
     <li>
-      <a class="<?php if ($curr_page === 'store' || $curr_page === 'products' ) {
+      <a class="<?php if ($curr_page === 'store' || $curr_page === 'products') {
                   echo 'active';
                 } ?>" href="?page=store">Store</a>
     <li>
@@ -35,6 +35,11 @@ if (isset($_GET['page'])) {
       <a class="<?php if ($curr_page === 'contact') {
                   echo 'active';
                 } ?>" href="?page=contact">Contact</a>
+    </li>
+    <li>
+      <a href="./admin/">
+        <i class="fa fa-user"></i>
+      </a>
     </li>
   </ul>
 </div>

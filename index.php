@@ -15,14 +15,15 @@ include('./db_operations/connect.php');
 
     <?php
     if (isset($_GET['page'])) {
-      $pages = ['home', 'about', 'gallerie', 'contact', 'store', 'products'];
+      $pages = ['home', 'about', 'gallerie', 'contact', 'store', 'products','login'];
       $page = $_GET['page'];
       if (in_array($page, $pages)) {
         gotoPage($page);
       } else {
         gotoPage('404');
       }
-    } else {
+    } 
+    else {
       gotoPage('home');
     }
     ?>

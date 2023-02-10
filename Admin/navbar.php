@@ -14,9 +14,9 @@
         </li>
 
       </ul>
-      <span class="navbar-text">
+      <a href="index.php?logout" class="navbar-text">
         Profil Admin
-      </span>
+      </a>
     </div>
   </div>
 </nav>
