@@ -12,7 +12,7 @@
 
             </ul>
             <a href="?logout" class="navbar-text">
-                Deconnexion
+                Déconnexion
             </a>
         </div>
     </div>
