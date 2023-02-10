@@ -1,53 +1,70 @@
-body {
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
   background-color: #080710;
+  background-image: url("../images/IMG2.jpeg");
+  background-size: cover;
 }
 
 .background {
-  width: 430px;
-  height: 520px;
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
+  width: 30%;
+  height: 100%;
+  -webkit-animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
 }
 
 .background .shape {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   position: absolute;
   border-radius: 50%;
 }
 
 .shape:first-child {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5D3891), to(#23a2f6));
-  background: linear-gradient(#5D3891, #23a2f6);
-  left: -10px;
-  top: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1845ad), to(#23a2f6));
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -20px;
+  top: 10px;
 }
 
 .shape:last-child {
-  background: -webkit-gradient(linear, left top, right top, from(#F99417), to(#f09819));
-  background: linear-gradient(to right, #F99417, #f09819);
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#f09819));
+  background: linear-gradient(to right, #ff512f, #f09819);
   right: -30px;
-  bottom: 50px;
+  bottom: 10px;
 }
 
 form {
+  width: 400px !important;
   /* height: 520px; */
-  width: 400px;
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   border-radius: 10px;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-          box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 50px 35px;
 }
 
@@ -108,8 +125,8 @@ input {
 button {
   margin-top: 50px;
   width: 100%;
-  border: 1px solid #5D3891;
-  color: #5D3891;
+  background-color: #ffffff;
+  color: #080710;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;
@@ -144,4 +161,25 @@ button {
 
 .social i {
   margin-right: 4px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

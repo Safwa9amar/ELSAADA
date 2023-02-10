@@ -23,12 +23,16 @@
         width: 500px;
         object-fit: cover;
         animation: blur-in 0.5s ease-in-out;
+        @media screen and (max-width: 768px) {
+          width: 100%;  
+        }
       }
     }
     .thumbs {
       width: 100%;
       display: flex;
       justify-content: space-evenly;
+      margin-inline: 1rem;
       .active {
         border: 2px solid $secondary;
       }
@@ -86,5 +90,11 @@
         }
       }
     }
+  }
+  @media screen and (max-width: 996px) {
+    flex-direction: column;
+    align-items: center;
+    
+  
   }
 }

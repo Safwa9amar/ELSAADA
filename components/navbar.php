@@ -37,7 +37,7 @@ if (isset($_GET['page'])) {
                 } ?>" href="?page=contact">Contact</a>
     </li>
     <li>
-      <a href="./admin/">
+      <a href="./admin/" target="_blank" >
         <i class="fa fa-user"></i>
       </a>
     </li>

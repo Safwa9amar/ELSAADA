@@ -7,18 +7,19 @@
   font-family: sans-serif;
 }
 
-/* Style the body */
 body {
   font-family: "Space Grotesk", sans-serif;
-  background-color: $whiteGray;
-  margin: 0;
+  // background-color: $whiteGray;
   overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
