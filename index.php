@@ -1,5 +1,6 @@
-<?php include('./components/functions.php') ?>
-<?php include('./db_operations/connect.php') ?>
+<?php include('./components/functions.php');
+include('./db_operations/connect.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@
 
     <?php
     if (isset($_GET['page'])) {
-      $pages = ['home', 'about', 'gallerie', 'contact', 'store','products'];
+      $pages = ['home', 'about', 'gallerie', 'contact', 'store', 'products'];
       $page = $_GET['page'];
       if (in_array($page, $pages)) {
         gotoPage($page);

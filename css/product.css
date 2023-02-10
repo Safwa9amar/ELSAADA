@@ -175,6 +175,9 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.product-container .carosel .thumbs .active {
+  border: 2px solid #F99417;
+}
 .product-container .carosel .thumbs img {
   width: 80px;
   height: 80px;

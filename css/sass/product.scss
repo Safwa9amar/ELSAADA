@@ -29,6 +29,9 @@
       width: 100%;
       display: flex;
       justify-content: space-evenly;
+      .active {
+        border: 2px solid $secondary;
+      }
       img {
         width: 80px;
         height: 80px;
