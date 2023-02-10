@@ -62,36 +62,5 @@
     color: gray;
   }
 
-  .fakeimg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  input[type="text"] {
-    width: 50%;
-    padding: 12px 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    border: 1px solid gray;
-    border-radius: 5px;
-  }
-
-  table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  th,
-  td {
-    padding: 10px;
-    text-align: center;
-    font-size: 18px;
-    border: 1px solid gray;
-  }
-
-  th h4 {
-    color: white;
-  }
 }

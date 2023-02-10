@@ -1,15 +1,26 @@
+@import "animations";
+@import "variables";
 .store {
   width: 100%;
 
   .cards-container {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    grid-gap: 2rem;
+
+    animation: fade-in 1s ease-in-out;
+
     .pruduct-card {
       display: inline-block;
       width: 240px;
       text-align: center;
-
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }
+    
       .img-container {
         height: 230px;
         width: 200px;
@@ -46,7 +57,7 @@
         font-size: 14px;
         h3 {
           margin: 20px 0px 10px 0px;
-          color: #04bcff;
+          color: $secondary;
           font-size: 18px;
         }
       }

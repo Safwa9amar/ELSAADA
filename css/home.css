@@ -60,37 +60,3 @@
   text-align: center;
   color: gray;
 }
-.home-wrapper .fakeimg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.home-wrapper input[type=text] {
-  width: 50%;
-  padding: 12px 20px;
-  margin-bottom: 20px;
-  font-size: 18px;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-.home-wrapper table {
-  margin: 20px auto;
-  border-collapse: collapse;
-  width: 80%;
-}
-.home-wrapper th,
-.home-wrapper td {
-  padding: 10px;
-  text-align: center;
-  font-size: 18px;
-  border: 1px solid gray;
-}
-.home-wrapper th h4 {
-  color: white;
-}

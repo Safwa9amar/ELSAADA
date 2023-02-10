@@ -43,3 +43,25 @@
         opacity: 1;
     }
 }
+
+// scale animation
+@keyframes scale {
+    0% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+// blur in animation
+@keyframes blur-in {
+    0% {
+        filter: blur(10px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}

@@ -1,15 +1,8 @@
+<?php include('./db_operations/connect.php') ?>
 
 <?php
+$sql = "SELECT * FROM localtion";
+$result = mysqli_query($con, $sql);
+$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// get all products
-function get_all_products() {
-    global $db;
-    $query = 'SELECT * FROM localtion
-              ORDER BY id';
-    $statement = $db->prepare($query);
-    $statement->execute();
-    $products = $statement->fetchAll();
-    $statement->closeCursor();
-    return $products;
-}
 ?>
