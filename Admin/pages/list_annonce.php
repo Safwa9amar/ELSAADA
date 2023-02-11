@@ -33,75 +33,55 @@ $res = mysqli_query($con, $ReadSql);
         <?php while ($product = mysqli_fetch_assoc($res)) {
         ?>
 
-        <tr>
-          <th scope="row"><?php echo $product['id']; ?></th>
+          <tr>
+            <th scope="row"><?php echo $product['id']; ?></th>
 
-          <td><?php echo $product['emplacement']; ?></td>
-          <td><?php echo $product['nombre_chembre']; ?></td>
-          <td><?php echo $product['description']; ?></td>
-          <td><?php echo $product['prix']; ?></td>
-          <td>
-            <p>
-              <button
-                class="btn btn-primary"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#<?php echo $product['id'] ?>"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                Voir tout
+            <td><?php echo $product['emplacement']; ?></td>
+            <td><?php echo $product['nombre_chembre']; ?></td>
+            <td><?php echo $product['description']; ?></td>
+            <td><?php echo $product['prix']; ?></td>
+            <td>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $product['id'] ?>" aria-expanded="false" aria-controls="<?php echo $product['id'] ?>">
+                Voir
               </button>
-            </p>
-            <div class="collapse" id="<?php echo $product['id'] ?>">
-              <div class="card card-body">
-                <ul>
-                  <?php include('../db_operations/product/product_li.php') ?>
-                </ul>
+              <div class="collapse" id="<?php echo $product['id'] ?>">
+                <div class="card card-body">
+                  <ul>
+                    <?php include('../db_operations/product/product_li.php') ?>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </td>
+            </td>
 
-          <td>
-            <a href="?page=update&id=<?php echo $product['id']; ?>" class="m-2">
-              <i class="fa fa-edit fa-2x"></i>
-            </a>
-            <i
-              class="fa fa-trash fa-2x red-icon"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal<?php echo $product['id']; ?>"
-            >
-            </i>
+            <td class="d-flex gap-2">
+              <a href="?page=update&id=<?php echo $product['id']; ?>" class="btn btn-success btn-sm  ">
+                <i class="fa fa-edit fa-2x"></i>
+              </a>
+              <i class="fa fa-trash fa-2x red-icon btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $product['id']; ?>">
+              </i>
 
-            <div
-              class="modal fade"
-              id="exampleModal<?php echo $product['id']; ?>"
-              role="dialog"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <p>Êtes-vous sur de vouloir supprimer cette annonce ?</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-dismiss="modal"
-                    >
-                      Annuler
-                    </button>
-                    <a href="?page=delete&id=<?php echo $product['id']; ?>">
-                      <button class="btn btn-danger" type="button">
-                        Confirmer
+            </td>
+            
+              <div class="modal fade" id="exampleModal<?php echo $product['id']; ?>" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <p>Êtes-vous sur de vouloir supprimer cette annonce ?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary " data-bs-dismiss="modal">
+                        Annuler
                       </button>
-                    </a>
+                      <a href="?page=delete&id=<?php echo $product['id']; ?>">
+                        <button class="btn btn-danger" type="button">
+                          Confirmer
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </td>
-        </tr>
+          </tr>
         <?php } ?>
       </tbody>
     </table>

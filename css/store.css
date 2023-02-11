@@ -151,26 +151,27 @@
 .store .cards-container .pruduct-card:visited {
   color: inherit;
 }
+.store .cards-container .pruduct-card:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 .store .cards-container .pruduct-card .img-container {
-  height: 230px;
+  height: 200px;
   width: 200px;
   overflow: hidden;
-  border-radius: 0px 0px 20px 20px;
   display: inline-block;
 }
 .store .cards-container .pruduct-card .img-container img {
-  -webkit-transform: skew(0deg, -13deg);
-          transform: skew(0deg, -13deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   height: 250px;
   margin: -35px 0px 0px -70px;
 }
 .store .cards-container .pruduct-card .inner-skew {
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   padding: 0px;
-  -webkit-transform: skew(0deg, 13deg);
-          transform: skew(0deg, 13deg);
   font-size: 0px;
   margin: 30px 0px 0px 0px;
   background: #c8c2c2;
@@ -181,7 +182,7 @@
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   padding: 120px 20px 20px 20px;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   background: #fff;
   margin: -120px 0px 0px 0px;
   line-height: 19px;
