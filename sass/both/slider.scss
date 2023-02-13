@@ -1,0 +1,37 @@
+@import "../_Landing/variables";
+
+.carosel {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+    .img-wrapper {
+      img {
+        border-radius: 5px;
+        height: 400px;
+        width: 500px;
+        object-fit: cover;
+        animation: blur-in 0.5s ease-in-out;
+        @media screen and (max-width: 768px) {
+          width: 100%;  
+        }
+      }
+    }
+    .thumbs {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-inline: 1rem;
+      .active {
+        border: 2px solid $secondary;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        cursor: pointer;
+        animation: blur-in 1s ease-in-out;
+
+      }
+    }
+  }
