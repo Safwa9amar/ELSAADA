@@ -35,16 +35,14 @@
     <div class="form-wrapper">
       <form>
         <label>
-          <span>LE NOM</span>
-          <input type="text" required />
+           
+          <input placeholder="LE NOM" type="text" required />
         </label>
         <label>
-          <span>E-mail</span>
-          <input type="email" required />
+          <input placeholder="E-mail" type="email" required />
         </label>
         <label>
-          <span>Message...</span>
-          <textarea rows="5"></textarea>
+          <textarea placeholder="Message..." rows="5"></textarea>
         </label>
         <input class="button" type="submit" name="submit" />
       </form>
@@ -56,6 +54,5 @@
       </div>
     </div>
   </div>
-  <div class="mask"></div>
 
 </section>

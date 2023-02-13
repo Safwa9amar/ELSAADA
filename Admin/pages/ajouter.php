@@ -4,14 +4,14 @@ include('./components/variables.php');
 
 if (isset($_POST) & !empty($_POST)) {
 
-  $name = ($_POST['name']);
-  $informations = ($_POST['informations']);
-  $emplacement = ($_POST['emplacement']);
-  $nombre_chembre = $_POST['nombre_chembre'];
-  $description = $_POST['description'];
-  $prix = $_POST['prix'];
+  $name = htmlspecialchars(($_POST['name']));
+  $informations = htmlspecialchars(($_POST['informations']));
+  $emplacement = htmlspecialchars(($_POST['emplacement']));
+  $nombre_chembre = htmlspecialchars($_POST['nombre_chembre']);
+  $description = htmlspecialchars($_POST['description']);
+  $prix = htmlspecialchars($_POST['prix']);
 
-  
+
   $CreateSql = "INSERT INTO $product_table (name, informations, emplacement, nombre_chembre,description,prix)  VALUES('$name','$informations', '$emplacement', '$nombre_chembre','$description','$prix') ";
   $res = mysqli_query($con, $CreateSql) or die(mysqli_error($con));
   if ($res) {
@@ -87,8 +87,8 @@ if (isset($_POST) & !empty($_POST)) {
         <input type="submit" value="Edit" class="btn btn-primary m-3">
 
       </div>
-     <!-- include slider -->
-     
+      <!-- include slider -->
+
     </form>
   </div>
 </div>

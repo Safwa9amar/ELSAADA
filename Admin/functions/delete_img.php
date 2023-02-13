@@ -35,6 +35,6 @@ function delete_img($id, $img_to_delete)
         unlink($upload_dir . $img_to_delete);
 
         // redirect to update page
-        header("location: ./?page=update&id=$id");
+        // header("location: ./?page=update&id=$id");
     }
 }

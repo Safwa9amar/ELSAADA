@@ -13,14 +13,21 @@ $r = mysqli_fetch_assoc($res);
 $images = explode(',', $r['images']);
 
 if (isset($_POST) & !empty($_POST)) {
-  $name = ($_POST['name']);
-  $proporite = ($_POST['informations']);
-  $emplacement = ($_POST['emplacement']);
-  $nombre_chembre = ($_POST['nombre_chembre']);
-  $description = $_POST['description'];
-  $prix = $_POST['prix'];
+  $_name = htmlspecialchars(($_POST['name']));
+  $proporite = htmlspecialchars(($_POST['informations']));
+  $emplacement = htmlspecialchars(($_POST['emplacement']));
+  $nombre_chembre = htmlspecialchars(($_POST['nombre_chembre']));
+  $description = htmlspecialchars($_POST['description']);
+  $prix = htmlspecialchars($_POST['prix']);
 
-  $UpdateSql = "UPDATE $product_table SET  name='$name', informations='$proporite',  emplacement='$emplacement',nombre_chembre='$nombre_chembre', description='$description',prix='$prix' WHERE id=$id ";
+  $UpdateSql = "UPDATE $product_table SET  
+                name='$_name', 
+                informations='$proporite',
+                emplacement='$emplacement',
+                nombre_chembre='$nombre_chembre',
+                description='$description',
+                prix='$prix'
+                WHERE id=$id ";
 
   $res = mysqli_query($con, $UpdateSql);
   if ($res) {
@@ -31,11 +38,37 @@ if (isset($_POST) & !empty($_POST)) {
 }
 
 if (isset($_GET['upload_img'])) {
+
   // get the img 
-  // update_column($product_table, 'images', $id);
   $img = $_FILES['img'];
   if ($img) {
-    upload_img($upload_dir, $img);
+    $uploaded_img = upload_img($upload_dir, $img, $id);
+    // get the img name
+    $img_name = $img['name'];
+    // get the id
+    $id = $_GET['id'];
+    // query to select all images
+    $sql = "SELECT * FROM $product_table where id=$id ";
+    // execute query
+    $result = mysqli_query($con, $sql);
+    // edit images column
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        $images = explode(',', $row['images']);
+      }
+    }
+    // add new image to $images array
+    array_push($images, $uploaded_img);
+    // convert array to string
+    $images = implode(',', $images);
+    // update images column
+    $sql = "UPDATE $product_table SET images='$images' WHERE id=$id";
+    // execute query
+    mysqli_query($con, $sql);
+    // redirect to update page
+    header("location: ./?page=update&id=$id");
+  } else {
+    $erreur = "l'ajout de l'image a échoué.";
   }
 }
 ?>

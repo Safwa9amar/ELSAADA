@@ -5,7 +5,7 @@
 
 // Path: Admin\functions\upload_img.php
 // upload image function
-function upload_img($dir, $img)
+function upload_img($dir, $img, $id)
 {
     $target_dir = $dir;
     $target_file = $target_dir . basename($img["name"]);
@@ -38,9 +38,10 @@ function upload_img($dir, $img)
         return false;
     } elseif (isset($_SESSION['username'])) {
         // chnage file name
-        $target_file = $target_dir . uniqid('product_') . '.' . $imageFileType;
+        $uniq_id = $id.'_'.uniqid('product_') . '.' . $imageFileType;
+        $target_file = $target_dir . $uniq_id;
         if (move_uploaded_file($img["tmp_name"], $target_file)) {
-            return $target_file;
+            return $uniq_id;
         } else {
             return false;
         }

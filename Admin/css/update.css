@@ -40,6 +40,7 @@
   left: 0;
 }
 .update form .form-slider img {
+  margin-top: 1rem;
   width: 150px;
   height: 150px;
   -o-object-fit: cover;

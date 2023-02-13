@@ -18,7 +18,7 @@ include('./components/config.php');
                 <div class="text-container">
                     <h3><?php echo $value['name']  ?></h3>
                     <p>
-                        <?php echo substr($value['description'], 30)  ?>
+                        <?php echo substr($value['description'],0,100)  ?>...voir plus
                     </p>
                 </div>
             </a>
