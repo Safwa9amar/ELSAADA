@@ -91,3 +91,21 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.home-wrapper .home-content .statistics {
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  background: url(../images/contact_bg.png);
+  background-size: cover;
+}
+.home-wrapper .home-content .statistics-card {
+  text-align: center;
+  color: #F5F5F5;
+}
+.home-wrapper .home-content .statistics-card svg {
+  width: 35px;
+  height: 35px;
+  fill: #F99417;
+}
