@@ -11,7 +11,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: sticky;
-  z-index: 111;
+  z-index: 111111111111;
   top: 0;
   padding-inline: 2rem;
   background: #5D3891;
@@ -62,6 +62,22 @@
   bottom: -10px;
   left: 0;
   border-radius: 5px;
+}
+.nav ul li .action-btn {
+  height: 3rem;
+  color: #F5F5F5;
+  background: #5D3891;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+}
+.nav ul li .action-btn:hover {
+  color: #2D2D2D;
+  background: #F99417;
 }
 @media screen and (max-width: 768px) {
   .nav {

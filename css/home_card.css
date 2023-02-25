@@ -1,0 +1,106 @@
+.card {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.card-img img {
+  width: 500px;
+  height: 350px;
+}
+.card-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1rem;
+}
+.card-description_price {
+  color: #F99417;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card-description_price p {
+  font-weight: bolder;
+}
+.card-description_price p span {
+  font-weight: normal;
+  color: #2D2D2D;
+}
+.card-description_price-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-description_price-action a {
+  background: #F99417;
+  text-decoration: none;
+  color: #F5F5F5;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0.6rem;
+}
+.card-description_price-action a:hover {
+  background: #5D3891;
+  color: #F5F5F5;
+}
+.card-description_price-action p {
+  padding: 0.6rem;
+  border: 1px solid #2D2D2D;
+  color: #2D2D2D;
+}
+.card-description .summary {
+  max-width: 500px;
+}
+.card-description .property-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.card-description .property-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.card-description .property-info-item .icon {
+  fill: #5D3891;
+  font-size: 1.5rem;
+  width: 50px;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card-img img {
+    width: 100%;
+    height: 100%;
+  }
+}

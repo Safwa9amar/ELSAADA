@@ -1,66 +1,76 @@
 @import "variables";
 
 .home-wrapper {
-  width: 95%;
-  // padding: 20px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  .descpription {
-    // background-color: #34495e;
-    background-image: url("../images/home_bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-
-    color: $primary;
-    height: 80vh;
-    // width: 20%;
-    border-radius: 10px;
+  width: 100%;
+  .hero {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+
+    .intro {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 111111;
+      background: $blackTransparent;
+      padding: 3rem;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      text-transform: lowercase;
+      color: $secondary;
+
+      h1 {
+        // font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+      p {
+        // font-size: 1.5rem;
+        font-weight: 400;
+        color: $whiteGray;
+        margin-bottom: 1rem;
+      }
+
+      .action-btn {
+        width: fit-content;
+        background: $secondary;
+        color: $blackGray;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        padding: 0.6rem;
+        border-radius: 0.3rem;
+        &:hover {
+          background: $primary;
+          color: $whiteGray;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .home-content {
+    padding-top: 2rem;
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    h1{
-      font-size: 4.5rem;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.911);
-    }
-    p {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    img {
-      width: 20%;
-      height: 10%;
-    }
+    align-items: center;
   }
-
-  .content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-
-  .content span {
-    font-size: 36px;
-  }
-
-  .content p {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  h5 {
-    font-size: 18px;
-    margin-bottom: 40px;
-    text-align: center;
-    color: gray;
-  }
-
-
 }
