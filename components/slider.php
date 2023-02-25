@@ -7,13 +7,12 @@
   <div class="swiper-wrapper">
 
     <!-- Slides -->
-    <img class="swiper-slide" src="https://picsum.photos/1920/1080" alt="" />
-    <img class="swiper-slide" src="../images/home_slider/2.jpg" alt="" />
-    <img class="swiper-slide" src="../images/home_slider/3.jpg" alt="" />
-    <img class="swiper-slide" src="../images/home_slider/4.jpg" alt="" />
-    <img class="swiper-slide" src="../images/home_slider/5.jpg" alt="" />
-    <img class="swiper-slide" src="../images/home_slider/6.jpg" alt="" />
-    <img class="swiper-slide" src="../images/home_slider/7.jpg" alt="" />
+    <img class="swiper-slide" src="./images/home_slider/6.jpg" alt="" />
+    <img class="swiper-slide" src="./images/home_slider/2.jpg" alt="" />
+    <img class="swiper-slide" src="./images/home_slider/3.jpg" alt="" />
+    <img class="swiper-slide" src="./images/home_slider/4.jpg" alt="" />
+    <img class="swiper-slide" src="./images/home_slider/5.jpg" alt="" />
+    <img class="swiper-slide" src="./images/home_slider/7.jpg" alt="" />
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>

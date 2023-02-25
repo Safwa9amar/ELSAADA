@@ -1,3 +1,3 @@
 <?php
-     $upload_dir = "../admin/uploads/";
+     $upload_dir = "./admin/uploads/";
 ?>

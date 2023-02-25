@@ -8,7 +8,7 @@ $product = mysqli_fetch_assoc($result);
 
 $product_imgs = explode(',', $product['images'])
 ?>
-<link rel="stylesheet" href="../css/home_card.css" />
+<link rel="stylesheet" href="./css/home_card.css" />
 <div class="card">
     <div class="card-img">
         <img src="<?php echo $upload_dir . $product_imgs[0] ?>" />
